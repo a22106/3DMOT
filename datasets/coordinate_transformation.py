@@ -198,7 +198,7 @@ def compute_box_3dto2d(bbox3d_input, calib_file):
         return corners_2d
     corners_3d = np.transpose(corners_3d)
     corners_2d = TransformationKitti(calib_file).project_3d_to_image(corners_3d)
-    return corners_2d, corners_3d
+    return corners_2d
 
 
 def convert_x1y1x2y2_to_xywh(bbox):
